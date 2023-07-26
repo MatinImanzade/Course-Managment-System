@@ -13,7 +13,7 @@ public class StudentRepo extends DBConfig implements IStudentRepo{
     @Override
     public void createStudent(Student student) {
         try(Connection connection = connect()){
-            PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO  student(name,surname,address,mail,phone_number,create_date)");
+            PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO  student(name,surname,address,mail,phone_number)");
         }catch (Exception exception){
             exception.printStackTrace();
         }finally {
